@@ -12,6 +12,7 @@ Follow the gide instructions
 - To automatically have Git hooks enabled after install `npm set-script prepare "husky install"`
 
 #### To create a hook
+
 `npx husky add .husky/pre-commit "npm test"`
 
 See the available hooks at [git documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
