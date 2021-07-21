@@ -4,13 +4,24 @@
 message=$(cat "$1")
 echo $message
 
-# if [ $message -eq 'major' ]; then
+[[ $message == "major:"* ]] && echo "Equal" || echo "Not equal"
+[[ $message == "minor:"* ]] && echo "Equal" || echo "Not equal"
+[[ $message != "patch:"* ]] && echo "Equal" || echo "Not equal"
+
+VAR='GNU/Linux is an operating system'
+if [[ $VAR == *"Linux"* ]]; then
+  echo "It's there."
+fi
+
+# if [[ $message == "major:"* ]]; then
 #   echo "major"
 #   npm version major
-# elif [ $message -eq 'minor' ]; then
-#   echo "minor"
-#   npm version minor
+# # elif [[ "$message" == "minor" ]]; then
+# #   echo "minor"
+# #   npm version minor
 # else
 #   echo "patch"
 #   npm version patch
 # fi
+
+# exit 1
